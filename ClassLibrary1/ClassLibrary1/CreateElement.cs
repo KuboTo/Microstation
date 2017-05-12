@@ -12,7 +12,7 @@ namespace ClassLibrary1
             Point3d startPnt = app.Point3dZero();
             Point3d endPnt = startPnt;
             startPnt.X = 10;
-            LineElement oLine = app.CreateLineElement2(null, ref startPnt, ref endPnt);
+            LineElement oLine = app.CreateLineElement2(null, ref startPnt, ref endPnt);//直线
             oLine.Color = 0; oLine.LineWeight = 2;
             app.ActiveModelReference.AddElement(oLine);
 
@@ -22,7 +22,7 @@ namespace ClassLibrary1
             pntArray[2] = app.Point3dFromXY(3, -2);
             pntArray[3] = app.Point3dFromXY(5, 2);
             pntArray[4] = app.Point3dFromXY(6, 0);
-            oLine = app.CreateLineElement1(null, ref pntArray);
+            oLine = app.CreateLineElement1(null, ref pntArray);//类似于多段线
             oLine.Color = 1; oLine.LineWeight = 2;
             app.ActiveModelReference.AddElement(oLine);
         }
